@@ -1,5 +1,7 @@
 import functions.add.ExpensesAdd;
 import functions.add.RevenueAdd;
+import functions.delete.ExpensesDelete;
+import functions.delete.RevenueDelete;
 import functions.edit.ExpensesEdit;
 import functions.edit.RevenueEdit;
 
@@ -57,11 +59,29 @@ public class Main {
                 option = scanner.nextInt();
 
                 if(option == 1){
-                    RevenueEdit revenue = new RevenueEdit("Monitores", "Monitores vendidos", 14700);
+                    RevenueEdit revenue = new RevenueEdit("Monitores", "", 14700);
                     revenue.update();
                 }else if(option == 2){
                     ExpensesEdit expenses = new ExpensesEdit("Benefícios", "", 10000);
                     expenses.update();
+                }
+            }else if(option == 3){ //delete
+                System.out.println();
+
+                System.out.println("Choose: ");
+                System.out.println();
+                System.out.println("1 - Revenue");
+                System.out.println("2 - Expenses");
+                System.out.print("-> ");
+
+                option = scanner.nextInt();
+
+                if(option == 1){
+                    RevenueDelete revenue = new RevenueDelete();
+                    revenue.delete();
+                }else if(option == 2){
+                    ExpensesDelete expenses = new ExpensesDelete();
+                    expenses.delete();
                 }
             }
         }
