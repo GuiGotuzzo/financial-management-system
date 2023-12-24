@@ -5,13 +5,13 @@ import database.Database;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class Revenue {
+public class RevenueAdd {
 
     private String title;
     private String description;
     private double value;
 
-    public Revenue(String title, String description, double value){
+    public RevenueAdd(String title, String description, double value){
         this.title = title;
         this.description = description;
         this.value = value;
