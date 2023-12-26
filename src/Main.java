@@ -4,6 +4,8 @@ import functions.delete.ExpensesDelete;
 import functions.delete.RevenueDelete;
 import functions.edit.ExpensesEdit;
 import functions.edit.RevenueEdit;
+import functions.show.datas.Datas;
+import functions.show.financial_graphic.FinancialGraphic;
 
 import java.sql.SQLException;
 import java.util.Scanner;
@@ -82,6 +84,48 @@ public class Main {
                 }else if(option == 2){
                     ExpensesDelete expenses = new ExpensesDelete();
                     expenses.delete();
+                }
+            }else if(option == 4){ //show
+                System.out.println();
+
+                System.out.println("Choose: ");
+                System.out.println();
+                System.out.println("1 - Datas");
+                System.out.println("2 - Financial graphic");
+                System.out.print("-> ");
+
+                option = scanner.nextInt();
+                if(option == 1){
+
+                    System.out.println("Choose: ");
+                    System.out.println();
+                    System.out.println("1 - Revenue");
+                    System.out.println("2 - Expenses");
+                    System.out.print("-> ");
+
+                    option = scanner.nextInt();
+
+                    Datas datas = new Datas();
+                    if(option == 1){
+                        datas.dataRevenue();
+                    }else if(option == 2){
+                        datas.dataExpenses();
+                    }
+                }else if(option == 2){
+                    System.out.println("Choose: ");
+                    System.out.println();
+                    System.out.println("1 - Revenue");
+                    System.out.println("2 - Expenses");
+                    System.out.print("-> ");
+
+                    option = scanner.nextInt();
+
+                    FinancialGraphic graphics = new FinancialGraphic();
+                    if(option == 1){
+                        graphics.graphicsRevenue();
+                    }else if(option == 2){
+                        graphics.graphicsExpenses();
+                    }
                 }
             }
         }
