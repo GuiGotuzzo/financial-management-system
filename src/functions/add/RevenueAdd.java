@@ -16,10 +16,10 @@ public class RevenueAdd {
         this.description = description;
         this.value = value;
     }
-    public void add() throws SQLException{
+    public void add(){
         String sql = "INSERT INTO revenue(name, description, revenue) VALUES(?, ?, ?)";
 
-        PreparedStatement ps = null;
+        PreparedStatement ps;
 
         try {
             ps = Database.getConnection().prepareStatement(sql);

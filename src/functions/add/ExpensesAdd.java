@@ -17,10 +17,10 @@ public class ExpensesAdd {
         this.value = value;
     }
 
-    public void add() throws SQLException {
+    public void add(){
         String sql = "INSERT INTO expenses(name, description, expense) VALUES(?, ?, ?)";
 
-        PreparedStatement ps = null;
+        PreparedStatement ps;
 
         try {
             ps = Database.getConnection().prepareStatement(sql);

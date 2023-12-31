@@ -13,6 +13,7 @@ public class Datas {
         try (PreparedStatement ps = Database.getConnection().prepareStatement(query);
              ResultSet resultSet = ps.executeQuery()){
 
+            System.out.println();
             System.out.println("Title\t\t\tDescription\t\t\tRevenue");
             System.out.println("-----------------------------------------------");
             while (resultSet.next()){
@@ -33,6 +34,7 @@ public class Datas {
         try (PreparedStatement ps = Database.getConnection().prepareStatement(query);
              ResultSet resultSet = ps.executeQuery()){
 
+            System.out.println();
             System.out.println("Title\t\t\tDescription\t\t\tExpense");
             System.out.println("-----------------------------------------------");
             while (resultSet.next()){

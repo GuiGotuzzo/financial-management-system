@@ -44,10 +44,10 @@ public class ExpensesDelete {
         }
     }
 
-    public void delete() throws SQLException{
+    public void delete(){
         String sql = "DELETE FROM expenses WHERE id = ?";
 
-        PreparedStatement ps = null;
+        PreparedStatement ps;
 
         try {
             //Print the tables and create a HashMap
@@ -69,7 +69,7 @@ public class ExpensesDelete {
                 ps.execute();
                 ps.close();
             }
-        }catch (SQLException e){
+        }catch (Exception e){
             e.printStackTrace();
         }
     }

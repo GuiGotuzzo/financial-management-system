@@ -43,10 +43,10 @@ public class RevenueDelete {
         }
     }
 
-    public void delete() throws SQLException{
+    public void delete(){
         String sql = "DELETE FROM revenue WHERE id = ?";
 
-        PreparedStatement ps = null;
+        PreparedStatement ps;
 
         try {
             //Print the tables and create a HashMap
