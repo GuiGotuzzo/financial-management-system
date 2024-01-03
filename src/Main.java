@@ -37,19 +37,19 @@ public class Main {
 
                 int option = scanner.nextInt();
 
-                if(option == 1){ //add
+                if(option == 1){ //Add
                     ControlAdd controlAdd = new ControlAdd();
                     controlAdd.control();
-                }else if(option == 2){ //edit
+                }else if(option == 2){ // Edit
                     ControlEdit controlEdit = new ControlEdit();
                     controlEdit.control();
-                }else if(option == 3){ //delete
+                }else if(option == 3){ // Delete
                     ControlDelete controlDelete = new ControlDelete();
                     controlDelete.control();
-                }else if(option == 4){ //show
+                }else if(option == 4){ // Show
                     ControlShow controlShow = new ControlShow();
                     controlShow.control();
-                }else if(option == 5) { //Leave
+                }else if(option == 5) { // Leave
                     a = false;
                 }else{
                     noneOption();
